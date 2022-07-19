@@ -1,0 +1,283 @@
+
+html{
+	@extend %ancho;
+}
+
+
+nav{
+	@include flex (flex,column-reverse);
+	background: $keyColorBar;
+}
+
+nav div{
+	@include flex (flex,row);
+	width: 50%;
+	justify-items: flex-start;
+}
+
+nav ul{
+	@include flex (flex, column, space-between);
+	@extend %ancho;
+	li{
+		list-style-type: none;
+		font-weight: bold;
+	}
+	a{
+		text-decoration: none;
+		color: $grey;
+		font-family: cursive;
+	}
+}
+
+
+video{
+	@extend %ancho;
+}
+
+
+
+header div img{
+	@extend %ancho;
+}
+
+main section img{
+	@extend %ancho;
+}
+
+section{
+	text-align: center;
+	@extend %ancho;
+}
+
+div img{
+	@extend %ancho;
+}
+
+footer{
+	background: $keyColorBar;
+	div{
+		@include flex (flex, row, space-around);
+		width: 100%;
+	}
+	
+}
+
+
+
+
+footer section{
+	@extend %ancho;
+}
+
+
+h5{
+	color: $carusellColor;
+	font-size: $fontWidhtxl;
+	font-weight: bold;
+}
+
+
+/* Camelcase  */
+
+.boxBorder{
+	@include flex (flex, column);
+	border: double 2px $boxColor;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: $blackL
+}
+
+.bodyImg{
+	background-image: url(../img/mapa.jpg);
+	background-size:cover;
+	@extend %ancho;
+}
+
+
+.bgDarkSize{
+	background-color:$borderColor;
+	color: $boxColor;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	@extend %ancho;
+}
+
+.ImgSize{
+	@include flex (flex, row, center);
+	font-size: 1.4rem;
+	width: 100%;
+}
+
+.navbar2{
+	@include flex (flex, column, space-between);
+	position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.HSize{
+	@include flex (flex, row, center);
+	font-size: 1.4rem;
+	padding-right: 3.5rem;
+	width: 100%;
+}
+
+.pSize{
+	text-align: center;
+	font-weight: bold;
+	font-size: $fontWidhts;
+	width: 100%;
+}
+
+.pieInde{
+	width: $maxWidht;
+	align-content: center;
+}
+
+.pieIndex{
+	@include flex (flex, column,);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.imagineSize{
+	filter: brightness(1.1);
+	mix-blend-mode: multiply;
+	text-align: center;
+	width: 50%;
+}
+
+
+.formSize{
+	@include flex (flex, column);
+	width: 100%;
+	border: double 2px $boxColor;
+	box-sizing: border-box;
+	text-align: left;
+	background-color: $blackL
+}
+
+.sectionSize{
+	display: flex;
+	align-items: center;
+	@extend %ancho;
+	height: 50%;
+}
+
+.textColor{
+	background-color: $borderColor;
+	color: $fontColor;
+	font-style: italic;
+	font-weight: bolder;
+}
+
+.boxColor{
+	background-color: $colorCarr;
+}
+
+.pColor{
+	color:$carusellColor;
+	font-size:$fontWidhts;
+	font-weight: bold;
+}
+
+/* Medias y Grid */
+
+@media only screen and (min-width: 800px){
+	
+	nav ul{
+		display: flex;
+		flex-direction:row;
+		align-content:space-between;
+	}
+
+	nav img{
+	margin-left: 2rem;
+	padding-left: 1rem;
+	}
+
+	nav ul li{
+		margin: 1rem;
+	}
+
+	.Box2{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	footer{
+		display: flex;
+		width: 100%;
+	}
+
+	footer div{
+		display: flex;
+		flex-direction: column;
+		margin-left: 1.5rem;
+	}
+
+	footer section iframe{
+		width: 100%;
+	}
+
+	.mainGrid{
+		display:flex;
+		flex-direction: column;
+	}
+
+	.imagineSize{
+		width: 70%;
+	}
+
+	.footer Img{
+		@include flex (flex,color);
+		align-items: center;
+	}
+
+	.pieInde{
+		width: 7rem;
+	}
+
+}
+
+@media only screen and (min-width: 1024px){
+
+
+		.grid-imagen{
+			display: flex;
+			flex-direction: row;
+			justify-items: center;
+		}
+
+		nav ul li{
+			margin: 1rem;
+			font-size: 1.7rem;
+		}
+
+		.bgDarkSize{
+			font-size: 2.5rem;
+		}
+
+		.pSize{
+			font-size: 2rem;
+		}
+
+		.imagentamaño2{
+			display: flex;
+			flex-direction: column;
+			width: 75rem;
+			align-items: stretch;
+			
+		}
+
+		.pieIndex{
+			font-size: 2rem;
+		}
+
+
+}
